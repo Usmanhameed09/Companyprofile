@@ -31,8 +31,8 @@ function AnimatedCounter({ value, suffix = '', duration = 2 }) {
 }
 
 const stats = [
-  { value: 10, suffix: '+', label: 'Years Experience', icon: '🏗️' },
-  { value: 500, suffix: '+', label: 'Projects Completed', icon: '✓' },
+  { value: 12, suffix: '+', label: 'Years Experience', icon: '🏗️' },
+  { value: 300, suffix: '+', label: 'Projects Completed', icon: '✓' },
   { value: 50, suffix: '+', label: 'Major Clients', icon: '🤝' },
   { value: 100, suffix: '%', label: 'Client Satisfaction', icon: '⭐' },
 ]
