@@ -1,5 +1,6 @@
-import './globals.css'
-import { SITE_URL, BUSINESS, AREAS_SERVED, SERVICES } from './seo.config'
+import '../globals.css'
+import { SITE_URL, BUSINESS, AREAS_SERVED, SERVICES } from '../seo.config'
+import { SERVICES_DATA } from '@/lib/services-data'
 
 const title = 'Car Parking Shades & Steel Structures in Saudi Arabia | NMJ Shades'
 const description =
@@ -39,6 +40,11 @@ export const metadata = {
   ],
   alternates: {
     canonical: '/',
+    languages: {
+      en: '/',
+      ar: '/ar',
+      'x-default': '/',
+    },
   },
   openGraph: {
     type: 'website',
@@ -118,13 +124,14 @@ const jsonLd = {
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Shade & Steel Structure Services',
-        itemListElement: SERVICES.map((service) => ({
+        itemListElement: SERVICES_DATA.map((service) => ({
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: service.name,
-            description: service.description,
-            serviceType: service.name,
+            name: service.en.name,
+            description: service.en.intro,
+            serviceType: service.en.name,
+            url: `${SITE_URL}/services/${service.slug}`,
             provider: { '@id': `${SITE_URL}/#business` },
             areaServed: { '@type': 'Country', name: 'Saudi Arabia' },
           },

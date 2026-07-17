@@ -20,6 +20,9 @@ module.exports = {
         'display': ['Bebas Neue', 'Impact', 'sans-serif'],
         'heading': ['Oswald', 'sans-serif'],
         'body': ['Outfit', 'sans-serif'],
+        // Bebas Neue / Oswald / Outfit have no Arabic glyphs, so Arabic pages
+        // fall back to Cairo rather than rendering in a mismatched fallback.
+        'arabic': ['Cairo', 'Tahoma', 'Arial', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

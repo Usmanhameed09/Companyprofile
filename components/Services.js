@@ -2,11 +2,13 @@
 
 import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 
 const services = [
   {
     id: 1,
     title: 'Car Parking Shades',
+    slug: 'car-parking-shades',
     shortTitle: 'Parking',
     description: 'High-quality shades designed to protect vehicles from harsh sunlight and heat, ideal for residential, commercial, and industrial use.',
     features: ['UV Protection up to 95%', 'Weather Resistant Fabric', 'Custom Sizes Available', 'Multiple Design Options', '10+ Year Lifespan'],
@@ -16,6 +18,7 @@ const services = [
   {
     id: 2,
     title: 'Playground Shades',
+    slug: 'playground-shades',
     shortTitle: 'Playground',
     description: 'Durable and UV-protected shades for school playgrounds, ensuring safety and comfort for children during outdoor activities.',
     features: ['Child-Safe Materials', 'Vibrant Color Options', 'Tensile Structures', 'HDPE Net Available', 'Quick Installation'],
@@ -25,6 +28,7 @@ const services = [
   {
     id: 3,
     title: 'PEB Warehouses',
+    slug: 'peb-warehouses',
     shortTitle: 'Warehouses',
     description: 'Pre-engineered steel warehouses built to client specifications—strong, efficient, and suitable for various industrial applications.',
     features: ['Custom Specifications', 'Quick Construction', 'Cost Effective', 'Expandable Design', 'Heavy Load Capacity'],
@@ -34,6 +38,7 @@ const services = [
   {
     id: 4,
     title: 'Warehouse Curtains',
+    slug: 'warehouse-curtains',
     shortTitle: 'Curtains',
     description: 'Flexible and weather-resistant curtains used for warehouses and commercial spaces to control dust, sunlight, and airflow.',
     features: ['PVC & Plastic Options', 'Temperature Control', 'Dust Prevention', 'Easy Operation', 'Low Maintenance'],
@@ -43,6 +48,7 @@ const services = [
   {
     id: 5,
     title: 'Steel Structures',
+    slug: 'steel-structures',
     shortTitle: 'Steel',
     description: 'Robust steel-framed sheds and shelters suitable for schools, workshops, and commercial spaces, offering long-term durability.',
     features: ['Galvanized Steel', 'Custom Fabrication', 'Professional Welding', 'Anti-Corrosion Coating', 'Engineering Certified'],
@@ -52,6 +58,7 @@ const services = [
   {
     id: 6,
     title: 'Tarpaulin Covers',
+    slug: 'tarpaulin-covers',
     shortTitle: 'Tarpaulin',
     description: 'Heavy-duty tarpaulins for vehicle and equipment coverage, offering reliable protection from dust, rain, and extreme weather.',
     features: ['Plastic (100-280 GSM)', 'PVC Material', 'Canvas (140-550 GSM)', 'Waterproof', 'Custom Sizes'],
@@ -235,7 +242,13 @@ export default function Services() {
                 </div>
 
                 {/* CTA */}
-                <div className="mt-8">
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <Link
+                    href={`/services/${currentService?.slug}`}
+                    className="btn-premium inline-flex"
+                  >
+                    {currentService?.title} details
+                  </Link>
                   <a href="#contact" className="btn-outline inline-flex">
                     Get Quote for {currentService?.shortTitle}
                   </a>
@@ -283,7 +296,7 @@ export default function Services() {
                 Why Choose NMJ?
               </h4>
               <ul className="space-y-3">
-                {['10+ Years Experience', 'Aramco Approved Vendor', 'Quality Guaranteed', 'Free Site Survey', 'Competitive Pricing'].map((item) => (
+                {['10+ Years Experience', 'Quality Guaranteed', 'Free Site Survey', 'Competitive Pricing'].map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

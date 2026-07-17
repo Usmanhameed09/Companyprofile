@@ -186,7 +186,17 @@ export default function Projects() {
       description: 'Tilt design Car Parking Shades for AMO & Partners Engineering CO',
       features: ['Tilt Design Shade', 'HDPE Net', 'Steel Fabrication'],
       images: ['/images/uq.jpeg','/images/uq2.jpeg','/images/uq3.jpeg','/images/uq4.jpeg'],
-      year: '2025',
+      year: '2026',
+    },
+        {
+      id: 18,
+      title: 'Car Parking Shade Ras Tanura',
+      category: 'Industrial',
+      location: 'Ras Tanura, KSA',
+      description: 'Ras Tanura Industrial Wastewater Treatment Project',
+      features: ['Tilt Design Shade', 'HDPE Net', 'Steel Fabrication'],
+      images: ['/images/ras1.png','/images/raas2.jpeg','/images/raas3.jpeg','/images/raas4.jpeg','/images/raas5.jpeg','/images/raas6.jpeg'],
+      year: '2026',
     }
   ]
   // ============================================

@@ -80,11 +80,20 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <motion.div
-            className="hidden md:block"
+            className="hidden md:flex items-center gap-4"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 3.2 }}
           >
+            {/* Arabic version — full reload is expected here: /ar has its own root layout */}
+            <a
+              href="/ar"
+              hrefLang="ar"
+              lang="ar"
+              className="text-white/70 hover:text-nmj-gold transition-colors text-sm"
+            >
+              العربية
+            </a>
             <Link
               href="#contact"
               className="btn-primary text-sm"

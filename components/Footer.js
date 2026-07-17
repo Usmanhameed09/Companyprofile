@@ -5,12 +5,12 @@ import Link from 'next/link'
 
 const footerLinks = {
   services: [
-    { name: 'Car Parking Shades', href: '#services' },
-    { name: 'Playground Shades', href: '#services' },
-    { name: 'PEB Warehouses', href: '#services' },
-    { name: 'Warehouse Curtains', href: '#services' },
-    { name: 'Steel Structures', href: '#services' },
-    { name: 'Tarpaulin', href: '#services' },
+    { name: 'Car Parking Shades', href: '/services/car-parking-shades' },
+    { name: 'Playground Shades', href: '/services/playground-shades' },
+    { name: 'PEB Warehouses', href: '/services/peb-warehouses' },
+    { name: 'Warehouse Curtains', href: '/services/warehouse-curtains' },
+    { name: 'Steel Structures', href: '/services/steel-structures' },
+    { name: 'Tarpaulin Covers', href: '/services/tarpaulin-covers' },
   ],
   company: [
     { name: 'About Us', href: '#about' },
