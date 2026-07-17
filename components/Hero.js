@@ -4,13 +4,6 @@ import { useRef, useEffect, useState } from 'react'
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion'
 import Link from 'next/link'
 
-// Project images from NMJ portfolio
-const projectImages = [
-  '/api/placeholder/600/400?text=Aramco+Project',
-  '/api/placeholder/600/400?text=BISAK+School',
-  '/api/placeholder/600/400?text=Naval+Base',
-]
-
 export default function Hero() {
   const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -111,36 +104,44 @@ export default function Hero() {
             </motion.div>
 
             {/* Main Headline */}
-            <div className="overflow-hidden mb-2">
-              <motion.h1
-                className="text-display text-white"
-                initial={{ y: '100%' }}
-                animate={{ y: 0 }}
-                transition={{ delay: 3, duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-              >
-                PREMIUM
-              </motion.h1>
-            </div>
-            <div className="overflow-hidden mb-2">
-              <motion.h1
-                className="text-display gradient-text"
-                initial={{ y: '100%' }}
-                animate={{ y: 0 }}
-                transition={{ delay: 3.1, duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-              >
-                SHADE
-              </motion.h1>
-            </div>
-            <div className="overflow-hidden mb-8">
-              <motion.h1
-                className="text-display text-white"
-                initial={{ y: '100%' }}
-                animate={{ y: 0 }}
-                transition={{ delay: 3.2, duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-              >
-                SOLUTIONS
-              </motion.h1>
-            </div>
+            <h1>
+              <span className="sr-only">
+                Premium Shade Solutions in Saudi Arabia — Car Parking Shades, Playground Shades,
+                PEB Warehouses and Steel Structures
+              </span>
+              <span aria-hidden="true">
+                <span className="block overflow-hidden mb-2">
+                  <motion.span
+                    className="block text-display text-white"
+                    initial={{ y: '100%' }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 3, duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                  >
+                    PREMIUM
+                  </motion.span>
+                </span>
+                <span className="block overflow-hidden mb-2">
+                  <motion.span
+                    className="block text-display gradient-text"
+                    initial={{ y: '100%' }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 3.1, duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                  >
+                    SHADE
+                  </motion.span>
+                </span>
+                <span className="block overflow-hidden mb-8">
+                  <motion.span
+                    className="block text-display text-white"
+                    initial={{ y: '100%' }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 3.2, duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                  >
+                    SOLUTIONS
+                  </motion.span>
+                </span>
+              </span>
+            </h1>
 
             {/* Description */}
             <motion.p

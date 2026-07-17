@@ -175,7 +175,7 @@ export default function Projects() {
       location: 'AMO & Partners Engineering CO, KSA',
       description: 'Tilt design Car Parking Shades for AMO & Partners Engineering CO',
       features: ['Tilt Design Shade', 'HDPE Net', 'Steel Fabrication'],
-      images: ['/images/amo.jpg','/images/amo1.jpeg','/images/amo2.jpeg','/images/amo3.jpeg'],
+      images: ['/images/amo.jpg','/images/amo1.jpg','/images/amo2.jpg','/images/amo3.jpg'],
       year: '2025',
     },
         {

@@ -61,7 +61,7 @@ export default function Preloader() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              <h1 className="font-display text-3xl text-white mb-2">NMJ SHADES</h1>
+              <div className="font-display text-3xl text-white mb-2">NMJ SHADES</div>
               <p className="text-nmj-gold text-sm tracking-[0.3em] uppercase">
                 Premium Shade Solutions
               </p>

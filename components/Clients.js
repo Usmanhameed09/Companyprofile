@@ -40,7 +40,7 @@ export default function Clients() {
     {
       id: 5,
       name: "Saudi Transformer CO",
-      logo: "/images/stc logo.png",
+      logo: "/images/stc-logo.png",
       category: "Industrial",
     },
     {

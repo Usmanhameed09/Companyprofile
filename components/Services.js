@@ -28,7 +28,7 @@ const services = [
     shortTitle: 'Warehouses',
     description: 'Pre-engineered steel warehouses built to client specifications—strong, efficient, and suitable for various industrial applications.',
     features: ['Custom Specifications', 'Quick Construction', 'Cost Effective', 'Expandable Design', 'Heavy Load Capacity'],
-    image: '/images/Wareouse.png',
+    image: '/images/wareouse.png',
     stats: { projects: '10+', satisfaction: '100%' },
   },
   {
