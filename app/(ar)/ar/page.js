@@ -4,9 +4,9 @@ import { BUSINESS } from '@/app/seo.config'
 import { SERVICES_DATA } from '@/lib/services-data'
 
 const STATS = [
-  { value: '+10', label: 'سنوات من الخبرة' },
-  { value: '+50', label: 'عميل موثوق' },
-  { value: '%100', label: 'رضا العملاء' },
+  { value: '10+', label: 'سنوات من الخبرة' },
+  { value: '50+', label: 'عميل موثوق' },
+  { value: '100%', label: 'رضا العملاء' },
 ]
 
 const CLIENTS = [
@@ -83,16 +83,13 @@ export default function ArabicHome() {
           </h1>
 
           <p className="text-nmj-sand/70 text-lg max-w-2xl mb-10 leading-relaxed">
-            {BUSINESS.legalName === 'Nabilah Mohammed Jameel Ali Bati Est.'
-              ? 'مؤسسة نبيلة محمد جميل علي باتي'
-              : BUSINESS.legalName}{' '}
-            — أكثر من عشر سنوات في تصميم وتصنيع وتركيب مظلات مواقف السيارات ومظلات المدارس
+            مؤسسة نبيلة محمد جميل علي باتي — أكثر من عشر سنوات في تصميم وتصنيع وتركيب مظلات مواقف السيارات ومظلات المدارس
             والمستودعات سابقة الهندسة والهياكل الحديدية في جميع أنحاء المملكة.
           </p>
 
           <div className="flex flex-wrap gap-4">
             <a href={`tel:${BUSINESS.phone}`} className="btn-premium">
-              اتصل {BUSINESS.phoneDisplay}
+              اتصل <span dir="ltr">{BUSINESS.phoneDisplay}</span>
             </a>
             <a href={wa} target="_blank" rel="noopener noreferrer" className="btn-outline">
               واتساب
@@ -103,7 +100,7 @@ export default function ArabicHome() {
           <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mt-16">
             {STATS.map((s) => (
               <div key={s.label} className="text-center">
-                <span className="block font-arabic font-bold text-3xl md:text-5xl text-nmj-gold mb-1">
+                <span dir="ltr" className="block font-arabic font-bold text-3xl md:text-5xl text-nmj-gold mb-1">
                   {s.value}
                 </span>
                 <span className="text-nmj-sand/50 text-xs md:text-sm">{s.label}</span>

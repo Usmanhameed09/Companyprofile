@@ -77,7 +77,7 @@ export default function ServicePage({ service, locale, allServices }) {
 
           <div className={`flex flex-wrap gap-4 ${rtl ? 'justify-end sm:justify-start' : ''}`}>
             <a href={`tel:${BUSINESS.phone}`} className="btn-premium">
-              {t.callUs} {BUSINESS.phoneDisplay}
+              {t.callUs} <span dir="ltr">{BUSINESS.phoneDisplay}</span>
             </a>
             <a
               href={`https://wa.me/${BUSINESS.phone.replace('+', '')}`}
@@ -182,7 +182,7 @@ export default function ServicePage({ service, locale, allServices }) {
           <p className="text-nmj-sand/60 mb-8 max-w-md mx-auto">{t.ctaBody}</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href={`tel:${BUSINESS.phone}`} className="btn-premium">
-              {t.callUs} {BUSINESS.phoneDisplay}
+              {t.callUs} <span dir="ltr">{BUSINESS.phoneDisplay}</span>
             </a>
             <a href={`mailto:${BUSINESS.email}`} className="btn-outline">
               {t.emailUs}
